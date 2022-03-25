@@ -3,7 +3,7 @@ const { check, validationResult } = require('express-validator');
 const generateUserValidators = () => [
     check('name').notEmpty().isLength({ max: 50 }).withMessage("Invalid name"),
     check('lastname').notEmpty().isLength({ max: 50 }).withMessage("Invalid lastname"),
-    check('phone').optional().isLength({ min: 10, max: 50 }).isNumeric().withMessage("Invalid name"),
+    check('phone').optional().isLength({ min: 10, max: 10 }).isNumeric().withMessage("Invalid name"),
     check('address').notEmpty().isLength({ max: 150 }).withMessage("Invalid name")
 ]
 
